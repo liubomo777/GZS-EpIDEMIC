@@ -1,0 +1,371 @@
+// 盒子模型 相关公共样式
+$font-list: 12 14 16 18 20 22 24 26 28 30 32 36 38 42 50 60; // 循环用font数组,需要其他宽度的时候数组添加即可
+
+@each $font in $font-list {
+  .font-size-#{$font} {
+    font-size: $font +px;
+  }
+}
+
+//间距  公共样式
+$list-width: 2 5 8 10 12 15 16 20 22 24 28 30 40 50 60 70 80 100 200;
+
+@each $width in $list-width {
+  .p-#{$width} {
+    padding: $width +px;
+  }
+
+  .p-l-#{$width} {
+    padding-left: $width +px;
+  }
+
+  .p-t-#{$width} {
+    padding-top: $width +px;
+  }
+
+  .p-r-#{$width} {
+    padding-right: $width +px;
+  }
+
+  .p-b-#{$width} {
+    padding-bottom: $width +px;
+  }
+
+  .m-#{$width} {
+    margin: $width +px;
+  }
+
+  .m-l-#{$width} {
+    margin-left: $width +px;
+  }
+
+  .m-t-#{$width} {
+    margin-top: $width +px;
+  }
+
+  .m-r-#{$width} {
+    margin-right: $width +px;
+  }
+
+  .m-b-#{$width} {
+    margin-bottom: $width +px;
+  }
+}
+
+//宽度
+$width-item:50 80 100 300 200 350 420 400 500;
+
+@each $width in $width-item {
+  .w-#{$width} {
+    width: $width +px !important;
+  }
+
+  .h-#{$width} {
+    height: $width +px !important;
+  }
+
+  .m-w-#{$width} {
+    min-width: $width +px;
+  }
+
+  .m-h-#{$width} {
+    min-height: $width +px;
+  }
+}
+
+.color {
+  &-666 {
+    color: #666666;
+  }
+
+  &-999 {
+    color: #999999;
+  }
+
+  &-fff {
+    color: #ffffff;
+  }
+
+  &-main {
+    color: #F6924D;
+  }
+
+  &-yellow {
+    color: #f0d081;
+  }
+
+  &-orange {
+    color: #FF8539;
+  }
+
+  &-red {
+    color: #FF5A5A;
+  }
+
+  &-blue-three {
+    color: #9ec7f0;
+  }
+
+}
+
+.bg-col {
+  &-main {
+    background-color: #ed554e;
+  }
+
+  &-red {
+    background-color: #FF5A5A;
+  }
+
+  &-yellow {
+    background-color: #f0d081;
+  }
+
+  &-orange {
+    background-color: #FF8539;
+  }
+
+  &-blue {
+    background-color: rgba(11, 49, 83, 0.4);
+  }
+  &-white {
+    background-color: #fff;
+  }
+
+}
+
+// // 重置标签
+/* 水平 垂直 居中 */
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* 垂直对齐 居中 */
+.flex-align-center {
+  align-items: center;
+}
+
+/* 水平对齐 两端对齐 */
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+/* 水平对齐 项目居中对齐 */
+.flex-justify-center {
+  justify-content: center;
+}
+
+/* 水平对齐 项目环绕对齐 */
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+/* 水平对齐 项目靠右对齐 */
+.flex-content-end {
+  justify-content: flex-end;
+}
+
+.flex-content-start {
+  justify-content: flex-start;
+}
+
+/* 子元素垂直排列 */
+.flex-direction-column {
+  flex-direction: column;
+}
+
+/* 子元素是换行 */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flexBox {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+.gap-16 {
+  gap: 16px;
+}
+
+.clearfix {
+  /* 为了照顾ie6浏览器*/
+  zoom: 1;
+  clear: both;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.dian {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+}
+
+.dian2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+.w33 {
+  width: 33.3% !important;
+}
+
+.w100 {
+  width: 100% !important;
+}
+.w90 {
+  width: 90% !important;
+}
+.w45{
+  width: 45% !important;
+}
+.w50{
+  width: 50% !important;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-b {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.aoto {
+  margin: 0 auto;
+}
+
+/* element样式重置 start */
+/* 去掉input尾部上下小箭头 start */
+.el-input input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  appearance: none !important;
+  margin: 0;
+}
+
+.el-input input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -o-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
+}
+
+/* 去掉input尾部上下小箭头 end */
+
+
+// 紧急程度样式
+.emegency-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: red;
+    display: block;
+    margin-right: 5px;
+  }
+
+  .紧急 {
+    background: #ff3b31;
+  }
+
+  .一般 {
+    background: #fe9400;
+  }
+
+  .不紧急 {
+    background: #fee300;
+  }
+}
+
+.i_tooltips{
+  position: relative;
+  cursor: pointer;
+}
+.i_tooltips:hover::after{
+  content: attr(data-title);
+  position: absolute;
+  top: 114%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 99;
+}
+.i_tooltips:hover::before{
+  content: '';
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: rgba(0,0,0,.5);
+  z-index: 99;
+}
+
