@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    登录页面
+      <el-form label-position="top">
+        <el-form-item label="用户名"></el-form-item>
+      </el-form>
   </div>
 </template>
 
